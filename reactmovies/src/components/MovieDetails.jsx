@@ -8,7 +8,7 @@ const MovieDetails = () => {
     let [movieInfo, setMovieInfo] = useState({});
 
     useEffect(()=>{
-        fetch(`https://www.omdbapi.com/?apikey=ca29d18&i=tt0163025`)
+        fetch(`https://www.omdbapi.com/?apikey=ca29d18&i=${imdbID}`)
         .then(res=>res.json())
         .then(data=>setMovieInfo(data))
         .catch(e=>console.log(e))
@@ -17,14 +17,14 @@ const MovieDetails = () => {
   return (
     <div>
         <h2>Movie Details</h2>
-        <p>{imdbID}</p>
+        <p>MovieID: {imdbID}</p>
         {
             movieInfo && (
                 <div>
-                    <h3>{movieInfo.Title}</h3>
-                    <h4>{movieInfo.Plot}</h4>
-                    <h5>{movieInfo.Actors}</h5>
-                    <p>{movieInfo.imdbRating}</p>
+                    <h3>Title:{movieInfo.Title}</h3>
+                    <h4>Plot: {movieInfo.Plot}</h4>
+                    <h5>Actors:{movieInfo.Actors}</h5>
+                    <p>Rating:{movieInfo.imdbRating}</p>
                 </div>
             )
         }
