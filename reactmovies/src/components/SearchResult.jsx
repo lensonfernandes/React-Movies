@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import styled from "styled-components";
 import Results from "./Results";
 
-const SearchResult = ({searchInput, setSearchInput}) => {
+const SearchResult = () => {
 
-
+    let [searchInput, setSearchInput] = useState("")
     let [searchResult, setSearchResult]= useState([])
 
     let handleSubmit= () =>{

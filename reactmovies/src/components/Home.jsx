@@ -7,7 +7,7 @@ import SearchResult from "./SearchResult";
 
 const Home = () => {
 
-let [searchInput, setSearchInput] = useState("")
+
 
 
 
@@ -22,7 +22,7 @@ let [searchInput, setSearchInput] = useState("")
         <Routes>
           {" "}
           <Route path="/" element={<SearchResult />} />
-          <Route path="/movies/:imdbID"   element={<MovieDetails searchInput={searchInput} setSearchInput={setSearchInput}  />}    />
+          <Route path="/movies/:imdbID"   element={<MovieDetails   />}    />
 
           </Routes>
       
