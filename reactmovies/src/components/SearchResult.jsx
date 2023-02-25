@@ -26,11 +26,11 @@ const SearchResult = () => {
   return (
     <div>    
       {" "}
-      <SearchWrapper>
+      <SearchWrapper className='search-wrapper'>
         <h2>Search For Movies By Their Title</h2>
-        <input value={searchInput} onChange={e=>setSearchInput(e.target.value)} ></input>
+        <input value={searchInput} onChange={e=>setSearchInput(e.target.value)}  className="search-input" placeholder='Search' ></input>
         <br></br>
-        <button onClick={handleSubmit}>Search Now</button>
+        <button onClick={handleSubmit} className="search-button">Search Now</button>
       </SearchWrapper>
     <Results  searchResult={searchResult} />
  </div>

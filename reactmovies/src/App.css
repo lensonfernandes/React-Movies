@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+.search-wrapper{
+    padding:20px;
+}
+
+.search-wrapper h2{
+
+    font-family: Inter, sans-serif;
+    font-weight:200;
+  
+    
+}
+
+.search-input{
+    width:1666px;
+    height:64px;
+    border: 1px solid white;
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    padding: 12px;
+
+}
+
+
+.search-button{
+    margin:40px 10px;
+    height: 66px;
+    width: 262px;
+    border-radius: 10px;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+
+}

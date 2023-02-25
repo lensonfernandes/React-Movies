@@ -13,8 +13,9 @@ function App() {
 
 let AppStyles = styled.div`
 background-color:black;
-height: 100vh;
+min-height: 100vh;
 color:white;
+font-family: Inter, sans-serif;
 `
 
 export default App;

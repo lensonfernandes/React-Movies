@@ -5,6 +5,7 @@ import MovieDetails from "./MovieDetails";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SearchResult from "./SearchResult";
 
+
 const Home = () => {
 
 
@@ -40,13 +41,14 @@ let NavbarWrapper = styled.div`
  
 
   font-family: Inter, sans-serif;
-  font-weight: 400;
+ 
   font-size: 32px;
   height: 60px;
 `;
 
 let Navbar = styled.div`
   padding-left: 30px;
+  font-weight: 400;
 `;
 
 let WhiteLine = styled.hr``;
