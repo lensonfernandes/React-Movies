@@ -7,7 +7,7 @@ const Results = ({ searchResult }) => {
 
   return (
     <div>
-      <h2>Movies Results for Title</h2>
+     { temp && <h2>Movies Results for Title</h2>}
 
       {temp &&
         temp.map((e, i) => {
@@ -25,9 +25,7 @@ const Results = ({ searchResult }) => {
           </div>);
         })}
       <div>
-        <Card />
-        <Card />
-        <Card />
+      
       </div>
     </div>
   );

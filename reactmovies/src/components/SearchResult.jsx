@@ -32,7 +32,7 @@ const SearchResult = () => {
         <br></br>
         <button onClick={handleSubmit}>Search Now</button>
       </SearchWrapper>
-      <Results  searchResult={searchResult} />
+    <Results  searchResult={searchResult} />
  </div>
   )
 }

@@ -12,8 +12,9 @@ function App() {
 }
 
 let AppStyles = styled.div`
-
+background-color:black;
 height: 100vh;
+color:white;
 `
 
 export default App;
