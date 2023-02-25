@@ -1,28 +1,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import MovieDetails from "./MovieDetails";
-import Results from "./Results";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SearchResult from "./SearchResult";
 
 const Home = () => {
 
 let [searchInput, setSearchInput] = useState("")
-let [searchResult, setSearchResult]= useState([])
-
-let handleSubmit= () =>{
-    console.log(searchInput)
-
-    fetch(`https://www.omdbapi.com/?apikey=ca29d18&s=harry`)
-    .then(res => res.json())
-    .then(data =>{
-
-        console.log(data)
-        setSearchResult(data)
-    })
-    .catch((e)=>console.log(e))
 
 
-}
+
 
   return (
     <BrowserRouter>
@@ -34,22 +22,12 @@ let handleSubmit= () =>{
         <Routes>
           {" "}
           <Route path="/" element={<SearchResult />} />
+          <Route path="/movies/:imdbID"   element={<MovieDetails searchInput={searchInput} setSearchInput={setSearchInput}  />}    />
 
           </Routes>
-          <SearchResult>
-            <div>
-              {" "}
-              <SearchWrapper>
-                <h2>Search For Movies By Their Title</h2>
-                <input value={searchInput} onChange={e=>setSearchInput(e.target.value)} ></input>
-                <br></br>
-                <button onClick={handleSubmit}>Search Now</button>
-              </SearchWrapper>
-              <Results  searchResult={searchResult} />
-            </div>
-          </SearchResult>
-          <MovieDetails />
-       
+      
+          {/* <MovieDetails />
+        */}
       </div>
     </BrowserRouter>
   );
@@ -73,10 +51,8 @@ let Navbar = styled.div`
 
 let WhiteLine = styled.hr``;
 
-let SearchWrapper = styled.div`
 
-`;
 
-let SearchResult = styled.div``;
+
 
 export default Home;
